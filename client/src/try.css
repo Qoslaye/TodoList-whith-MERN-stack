@@ -1,0 +1,179 @@
+@import url('https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700&display=swap');
+
+/* CSS RESET */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+
+body {
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+  background-color: #121212;
+  color: #f5f5f5;
+  font-family: 'Rubik', sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  margin: 0;
+  padding: 20px;
+}
+
+img,
+picture,
+video,
+canvas,
+svg {
+  display: block;
+  max-width: 100%;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+/* container */
+.container {
+  max-width: 600px;
+  width: 100%;
+  background: #1f1f1f;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+}
+
+.title {
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #bb86fc;
+}
+
+.todos {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  background: #2c2c2c;
+  border-radius: 8px;
+  transition: background 0.2s ease-in-out;
+}
+
+.todo:hover {
+  background: #373737;
+}
+
+.todo p {
+  flex: 1;
+  margin: 0;
+  padding: 0;
+  color: #f5f5f5;
+  transition: color 0.2s ease-in-out;
+}
+
+.todo p.line-through {
+  text-decoration: line-through;
+  color: #888;
+}
+
+.mutations {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.todo__status,
+.todo__delete {
+  border: none;
+  background: none;
+  color: #bb86fc;
+  cursor: pointer;
+  font-size: 1.5rem;
+  transition: transform 0.2s ease-in-out;
+}
+
+.todo__status:hover,
+.todo__delete:hover {
+  transform: scale(1.2);
+}
+
+/* form */
+.form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+.form__input {
+  flex: 1;
+  padding: 0.75rem 1rem;
+  border-radius: 8px;
+  border: 1px solid #3a3a3a;
+  background: #2c2c2c;
+  color: #f5f5f5;
+  transition: background 0.2s ease-in-out, border 0.2s ease-in-out;
+}
+
+.form__input:focus,
+.form__input:hover {
+  background: #373737;
+  border: 1px solid #bb86fc;
+}
+
+.form__button {
+  border: none;
+  padding: 0.75rem 1rem;
+  background-color: #bb86fc;
+  color: #1f1f1f;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.2s ease-in-out;
+}
+
+.form__button:hover {
+  background-color: #9a60db;
+}
+
+@media (max-width: 420px) {
+  .title {
+    font-size: 2rem;
+  }
+
+  .form {
+    flex-direction: column;
+  }
+
+  .form__input {
+    margin-bottom: 0.5rem;
+  }
+
+  .todo {
+    font-size: 1rem;
+  }
+}
